@@ -53,8 +53,7 @@ const revealObserver = new IntersectionObserver(
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 // ─── Animated Counter ─────────────────────────────────────────────────────────
-function animateCounter(el, target, suffix, duration) {
-  const start = 0;
+function animateCounter(el, target, suffix, format, duration) {
   const startTime = performance.now();
 
   function update(currentTime) {
@@ -65,7 +64,7 @@ function animateCounter(el, target, suffix, duration) {
     const current = Math.floor(eased * target);
 
     let display;
-    if (target >= 1000) {
+    if (format === 'K') {
       display = (current / 1000).toFixed(current >= 1000 ? 0 : 1).replace(/\.0$/, '') + 'K';
     } else {
       display = String(current);
@@ -88,10 +87,11 @@ const statsObserver = new IntersectionObserver(
     entries.forEach(entry => {
       if (entry.isIntersecting && !statsAnimated) {
         statsAnimated = true;
-        document.querySelectorAll('[data-count]').forEach(el => {
-          const target = parseInt(el.getAttribute('data-count'), 10);
+        document.querySelectorAll('[data-target]').forEach(el => {
+          const target = parseInt(el.getAttribute('data-target'), 10);
           const suffix = el.getAttribute('data-suffix') || '';
-          animateCounter(el, target, suffix, 1800);
+          const format = el.getAttribute('data-format') || '';
+          animateCounter(el, target, suffix, format, 1500);
         });
         statsObserver.unobserve(entry.target);
       }
