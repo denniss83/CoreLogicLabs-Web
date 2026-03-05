@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CoreLogicLabs — Games, Lifestyle & Utility apps on Google Play." />
+  <title>CoreLogicLabs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════ NAVBAR ═══════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="lightning">⚡</span>CoreLogicLabs
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero"    data-i18n="nav_home"></a></li>
+        <li><a href="#apps"    data-i18n="nav_apps"></a></li>
+        <li><a href="#about"   data-i18n="nav_about"></a></li>
+        <li><a href="#contact" data-i18n="nav_contact"></a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-btn" data-lang-toggle data-i18n="lang_toggle"></button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════ HERO ══════════ -->
+  <section id="hero">
+    <div class="hero-content reveal">
+      <h1 data-i18n="hero_title"></h1>
+      <p class="hero-subtitle" data-i18n="hero_subtitle"></p>
+      <p class="hero-tagline"  data-i18n="hero_tagline"></p>
+      <a href="#apps" class="btn-primary" data-i18n="hero_cta"></a>
+      <div class="hero-badges">
+        <span class="hero-badge">🎮</span>
+        <span class="hero-badge">📱</span>
+        <span class="hero-badge">🛠️</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════ ABOUT ═════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title" data-i18n="about_title"></h2>
+        <p class="about-desc" data-i18n="about_desc"></p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature card: Games -->
+        <div class="feature-card reveal">
+          <div class="feature-icon">🎮</div>
+          <h3 data-i18n="feature_games_title"></h3>
+          <p  data-i18n="feature_games_desc"></p>
+        </div>
+
+        <!-- Feature card: Lifestyle -->
+        <div class="feature-card reveal">
+          <div class="feature-icon">📱</div>
+          <h3 data-i18n="feature_lifestyle_title"></h3>
+          <p  data-i18n="feature_lifestyle_desc"></p>
+        </div>
+
+        <!-- Feature card: Utility -->
+        <div class="feature-card reveal">
+          <div class="feature-icon">🛠️</div>
+          <h3 data-i18n="feature_utility_title"></h3>
+          <p  data-i18n="feature_utility_desc"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════ APPS ══════════ -->
+  <section id="apps">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title" data-i18n="apps_title"></h2>
+        <p class="section-subtitle" data-i18n="apps_subtitle"></p>
+      </div>
+
+      <div class="apps-grid">
+
+        <!-- App Card 1: Game -->
+        <div class="app-card reveal">
+          <div class="app-icon game">🎮</div>
+          <h3 data-i18n="app1_name"></h3>
+          <p  data-i18n="app1_desc"></p>
+          <span class="category-badge" data-i18n="app1_category"></span>
+          <!-- TODO: Replace # with real Google Play URL -->
+          <a href="#" class="btn-play" data-i18n="btn_google_play"></a>
+        </div>
+
+        <!-- App Card 2: Lifestyle -->
+        <div class="app-card reveal">
+          <div class="app-icon lifestyle">📱</div>
+          <h3 data-i18n="app2_name"></h3>
+          <p  data-i18n="app2_desc"></p>
+          <span class="category-badge" data-i18n="app2_category"></span>
+          <!-- TODO: Replace # with real Google Play URL -->
+          <a href="#" class="btn-play" data-i18n="btn_google_play"></a>
+        </div>
+
+        <!-- App Card 3: Utility -->
+        <div class="app-card reveal">
+          <div class="app-icon utility">🛠️</div>
+          <h3 data-i18n="app3_name"></h3>
+          <p  data-i18n="app3_desc"></p>
+          <span class="category-badge" data-i18n="app3_category"></span>
+          <!-- TODO: Replace # with real Google Play URL -->
+          <a href="#" class="btn-play" data-i18n="btn_google_play"></a>
+        </div>
+
+        <!-- TODO: Add more app cards here following the same card structure -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════ STATS ═════════ -->
+  <!-- TODO: Update stat numbers with real data -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <span class="stat-number" data-count="10"    data-suffix="+">10+</span>
+          <span class="stat-label"  data-i18n="stats_apps"></span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-count="50000" data-suffix="+">50K+</span>
+          <span class="stat-label"  data-i18n="stats_downloads"></span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-count="10000" data-suffix="+">10K+</span>
+          <span class="stat-label"  data-i18n="stats_users"></span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-count="5"     data-suffix="+">5+</span>
+          <span class="stat-label"  data-i18n="stats_countries"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════ CONTACT ═══════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title" data-i18n="contact_title"></h2>
+        <p class="contact-desc"   data-i18n="contact_desc"></p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Info column -->
+        <div class="contact-info reveal">
+          <!-- Email -->
+          <div class="contact-item">
+            <span class="ci-icon">📧</span>
+            <div>
+              <div class="ci-label" data-i18n="contact_email_label"></div>
+              <!-- TODO: Replace with real email -->
+              <div class="ci-value">[PLACEHOLDER: contact@corelogiclabs.com]</div>
+            </div>
+          </div>
+
+          <!-- Google Play -->
+          <div class="contact-item">
+            <span class="ci-icon">▶</span>
+            <div>
+              <div class="ci-label" data-i18n="contact_play_label"></div>
+              <!-- TODO: Replace with real Google Play developer page URL -->
+              <div class="ci-value">[PLACEHOLDER: Google Play Store URL]</div>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div class="social-row">
+            <a href="#" class="social-link" aria-label="GitHub">🐙</a>
+            <a href="#" class="social-link" aria-label="Twitter / X">🐦</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+          </div>
+        </div>
+
+        <!-- Form column -->
+        <!-- TODO: Connect form to Formspree (https://formspree.io) or EmailJS for form submissions -->
+        <form class="contact-form reveal" id="contact-form" action="#" method="POST">
+          <input type="text"  name="name"    data-i18n="form_name"    required />
+          <input type="email" name="email"   data-i18n="form_email"   required />
+          <textarea           name="message" data-i18n="form_message" required></textarea>
+          <button type="submit" class="btn-primary" data-i18n="form_submit"></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════ FOOTER ════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo"><span class="lightning">⚡</span>CoreLogicLabs</div>
+        <p class="footer-copy" data-i18n="footer_rights"></p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#hero"    data-i18n="nav_home"></a></li>
+        <li><a href="#apps"    data-i18n="nav_apps"></a></li>
+        <li><a href="#about"   data-i18n="nav_about"></a></li>
+        <li><a href="#contact" data-i18n="nav_contact"></a></li>
+        <!-- TODO: Add privacy policy page -->
+        <li><a href="#" data-i18n="footer_privacy"></a></li>
+      </ul>
+
+      <div class="footer-actions">
+        <button class="lang-btn" data-lang-toggle data-i18n="lang_toggle"></button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
