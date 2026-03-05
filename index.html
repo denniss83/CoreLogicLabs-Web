@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CoreLogicLabs — Games, Lifestyle & Utility apps on Google Play." />
+  <meta name="description" content="CoreLogicLabs — Build Smarter. Live Better. Play More. AI-powered mobile apps on Google Play." />
+  <meta property="og:title" content="CoreLogicLabs" />
+  <meta property="og:description" content="AI-powered mobile apps. Modern design, reliable infrastructure, user-focused digital solutions." />
+  <meta property="og:type" content="website" />
   <title>CoreLogicLabs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,7 +47,7 @@
       <a href="#apps" class="btn-primary" data-i18n="hero_cta"></a>
       <div class="hero-badges">
         <span class="hero-badge">🎮</span>
-        <span class="hero-badge">📱</span>
+        <span class="hero-badge">🔮</span>
         <span class="hero-badge">🛠️</span>
       </div>
     </div>
@@ -68,7 +71,7 @@
 
         <!-- Feature card: Lifestyle -->
         <div class="feature-card reveal">
-          <div class="feature-icon">📱</div>
+          <div class="feature-icon">🔮</div>
           <h3 data-i18n="feature_lifestyle_title"></h3>
           <p  data-i18n="feature_lifestyle_desc"></p>
         </div>
@@ -93,34 +96,15 @@
 
       <div class="apps-grid">
 
-        <!-- App Card 1: Game -->
+        <!-- App Card: Tarot Akademi -->
         <div class="app-card reveal">
-          <div class="app-icon game">🎮</div>
-          <h3 data-i18n="app1_name"></h3>
-          <p  data-i18n="app1_desc"></p>
-          <span class="category-badge" data-i18n="app1_category"></span>
-          <!-- TODO: Replace # with real Google Play URL -->
-          <a href="#" class="btn-play" data-i18n="btn_google_play"></a>
-        </div>
-
-        <!-- App Card 2: Lifestyle -->
-        <div class="app-card reveal">
-          <div class="app-icon lifestyle">📱</div>
-          <h3 data-i18n="app2_name"></h3>
-          <p  data-i18n="app2_desc"></p>
-          <span class="category-badge" data-i18n="app2_category"></span>
-          <!-- TODO: Replace # with real Google Play URL -->
-          <a href="#" class="btn-play" data-i18n="btn_google_play"></a>
-        </div>
-
-        <!-- App Card 3: Utility -->
-        <div class="app-card reveal">
-          <div class="app-icon utility">🛠️</div>
-          <h3 data-i18n="app3_name"></h3>
-          <p  data-i18n="app3_desc"></p>
-          <span class="category-badge" data-i18n="app3_category"></span>
-          <!-- TODO: Replace # with real Google Play URL -->
-          <a href="#" class="btn-play" data-i18n="btn_google_play"></a>
+          <div class="app-icon" style="background: linear-gradient(135deg, #6b21a8, #d97706)">🔮</div>
+          <div class="app-info">
+            <span class="app-category" data-i18n="app1_category">Lifestyle</span>
+            <h3 data-i18n="app1_name">Tarot Akademi</h3>
+            <p  data-i18n="app1_desc"></p>
+            <a href="https://play.google.com/store/apps/details?id=com.corelogiclabs.tarotakademi" target="_blank" class="btn-play" data-i18n="btn_google_play">▶ Google Play</a>
+          </div>
         </div>
 
         <!-- TODO: Add more app cards here following the same card structure -->
@@ -129,24 +113,23 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════ STATS ═════════ -->
-  <!-- TODO: Update stat numbers with real data -->
   <section id="stats">
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item reveal">
-          <span class="stat-number" data-count="10"    data-suffix="+">10+</span>
+          <span class="stat-number" data-target="1"    data-suffix="+">0</span>
           <span class="stat-label"  data-i18n="stats_apps"></span>
         </div>
         <div class="stat-item reveal">
-          <span class="stat-number" data-count="50000" data-suffix="+">50K+</span>
+          <span class="stat-number" data-target="1000" data-suffix="+" data-format="K">0</span>
           <span class="stat-label"  data-i18n="stats_downloads"></span>
         </div>
         <div class="stat-item reveal">
-          <span class="stat-number" data-count="10000" data-suffix="+">10K+</span>
+          <span class="stat-number" data-target="500"  data-suffix="+">0</span>
           <span class="stat-label"  data-i18n="stats_users"></span>
         </div>
         <div class="stat-item reveal">
-          <span class="stat-number" data-count="5"     data-suffix="+">5+</span>
+          <span class="stat-number" data-target="22"   data-suffix="">0</span>
           <span class="stat-label"  data-i18n="stats_countries"></span>
         </div>
       </div>
@@ -169,8 +152,7 @@
             <span class="ci-icon">📧</span>
             <div>
               <div class="ci-label" data-i18n="contact_email_label"></div>
-              <!-- TODO: Replace with real email -->
-              <div class="ci-value">[PLACEHOLDER: contact@corelogiclabs.com]</div>
+              <div class="ci-value"><a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a></div>
             </div>
           </div>
 
@@ -179,8 +161,7 @@
             <span class="ci-icon">▶</span>
             <div>
               <div class="ci-label" data-i18n="contact_play_label"></div>
-              <!-- TODO: Replace with real Google Play developer page URL -->
-              <div class="ci-value">[PLACEHOLDER: Google Play Store URL]</div>
+              <div class="ci-value"><a href="https://play.google.com/store/apps/dev?id=8711780632580992511" target="_blank">CoreLogicLabs on Google Play</a></div>
             </div>
           </div>
 
