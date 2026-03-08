@@ -103,3 +103,31 @@ const statsObserver = new IntersectionObserver(
 if (statsSection) {
   statsObserver.observe(statsSection);
 }
+
+// ─── Contact Form (Formspree AJAX) ───────────────────────────────────────────
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('[type="submit"]');
+    const successMsg = document.getElementById('form-success');
+    submitBtn.disabled = true;
+    submitBtn.textContent = '…';
+    try {
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        contactForm.reset();
+        if (successMsg) successMsg.style.display = 'block';
+        setTimeout(() => { if (successMsg) successMsg.style.display = 'none'; }, 5000);
+      }
+    } catch (_) {}
+    submitBtn.disabled = false;
+    // Restore button text from i18n
+    const lang = localStorage.getItem('cll_lang') || 'en';
+    submitBtn.textContent = lang === 'tr' ? 'Mesaj Gönder' : lang === 'pt' ? 'Enviar Mensagem' : 'Send Message';
+  });
+}
