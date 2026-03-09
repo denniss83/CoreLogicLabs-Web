@@ -35,6 +35,7 @@ const translations = {
     form_email: "Your Email",
     form_message: "Your Message",
     form_submit: "Send Message",
+    form_success: "✓ Message sent successfully!",
     footer_rights: "© 2026 CoreLogicLabs. All rights reserved.",
     footer_privacy: "Privacy Policy",
   },
@@ -74,6 +75,7 @@ const translations = {
     form_email: "E-posta Adresiniz",
     form_message: "Mesajınız",
     form_submit: "Mesaj Gönder",
+    form_success: "✓ Mesajınız başarıyla gönderildi!",
     footer_rights: "© 2026 CoreLogicLabs. Tüm hakları saklıdır.",
     footer_privacy: "Gizlilik Politikası",
   },
@@ -113,6 +115,7 @@ const translations = {
     form_email: "Seu E-mail",
     form_message: "Sua Mensagem",
     form_submit: "Enviar Mensagem",
+    form_success: "✓ Mensagem enviada com sucesso!",
     footer_rights: "© 2026 CoreLogicLabs. Todos os direitos reservados.",
     footer_privacy: "Política de Privacidade",
   }
@@ -174,3 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 export { setLanguage, toggleLanguage, translations, currentLang };
+
+// Expose globally for non-module scripts
+window.i18n = { setLanguage, toggleLanguage, translations, get currentLang() { return currentLang; } };

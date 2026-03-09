@@ -127,7 +127,17 @@ if (contactForm) {
     } catch (_) {}
     submitBtn.disabled = false;
     // Restore button text from i18n
-    const lang = localStorage.getItem('cll_lang') || 'en';
-    submitBtn.textContent = lang === 'tr' ? 'Mesaj Gönder' : lang === 'pt' ? 'Enviar Mensagem' : 'Send Message';
+    const i18n = window.i18n;
+    submitBtn.textContent = i18n && i18n.translations[i18n.currentLang]
+      ? i18n.translations[i18n.currentLang].form_submit
+      : 'Send Message';
+  });
+}
+
+// Hide success message when user starts typing again
+if (contactForm) {
+  contactForm.addEventListener('input', () => {
+    const successMsg = document.getElementById('form-success');
+    if (successMsg) successMsg.style.display = 'none';
   });
 }
