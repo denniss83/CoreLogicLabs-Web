@@ -43,7 +43,7 @@ const translations = {
     nav_apps: "Uygulamalar",
     nav_about: "Hakkımızda",
     nav_contact: "İletişim",
-    lang_toggle: "🌐 EN",
+    lang_toggle: "🌐 PT",
     hero_title: "Daha Akıllı Üret. Daha İyi Yaşa. Daha Çok Oyna.",
     hero_subtitle: "Yapay zekâ destekli mobil uygulamalar. Modern tasarım, güvenilir altyapı, kullanıcı odaklı dijital çözümler.",
     hero_tagline: "Oyunlar · Yaşam Tarzı · Araçlar",
@@ -76,6 +76,45 @@ const translations = {
     form_submit: "Mesaj Gönder",
     footer_rights: "© 2026 CoreLogicLabs. Tüm hakları saklıdır.",
     footer_privacy: "Gizlilik Politikası",
+  },
+  pt: {
+    nav_home: "Início",
+    nav_apps: "Apps",
+    nav_about: "Sobre",
+    nav_contact: "Contato",
+    lang_toggle: "🌐 EN",
+    hero_title: "Construa com Inteligência. Viva Melhor. Jogue Mais.",
+    hero_subtitle: "Aplicativos móveis com IA. Design moderno, infraestrutura confiável, soluções digitais focadas no usuário.",
+    hero_tagline: "Jogos · Estilo de Vida · Ferramentas",
+    hero_cta: "Explore Nossos Apps",
+    about_title: "Sobre a CoreLogicLabs",
+    about_desc: "A CoreLogicLabs é um estúdio mobile independente que cria aplicativos com IA adaptados ao seu estilo de vida, entretenimento e forma de pensar. Combinamos tecnologia de ponta com design cuidadoso para criar experiências que realmente importam.",
+    feature_games_title: "Jogos e Entretenimento",
+    feature_games_desc: "Jogos imersivos e experiências interativas projetadas para entreter e envolver jogadores de todas as idades.",
+    feature_lifestyle_title: "Apps de Estilo de Vida",
+    feature_lifestyle_desc: "Apps intuitivos que enriquecem seu dia a dia — de bem-estar e mindfulness a astrologia e desenvolvimento pessoal.",
+    feature_utility_title: "Ferramentas Utilitárias",
+    feature_utility_desc: "Ferramentas inteligentes com IA que simplificam tarefas complexas e tornam seu fluxo de trabalho diário mais fácil.",
+    apps_title: "Nossos Apps",
+    apps_subtitle: "Descubra nossa coleção no Google Play",
+    app1_name: "Tarot Akademi",
+    app1_desc: "Embarque em uma jornada mística pelo mundo do Tarot. Aprenda o significado de cada carta, receba leituras diárias com IA e desvende a sabedoria oculta nos arcanos. Seu guia espiritual pessoal na palma da mão.",
+    app1_category: "Estilo de Vida",
+    btn_google_play: "▶ Google Play",
+    stats_apps: "Apps Publicados",
+    stats_downloads: "Downloads",
+    stats_users: "Usuários Satisfeitos",
+    stats_countries: "Países",
+    contact_title: "Entre em Contato",
+    contact_desc: "Tem alguma dúvida ou quer colaborar? Adoraríamos ouvir você. Entre em contato por e-mail ou nos encontre no Google Play.",
+    contact_email_label: "E-mail",
+    contact_play_label: "Google Play",
+    form_name: "Seu Nome",
+    form_email: "Seu E-mail",
+    form_message: "Sua Mensagem",
+    form_submit: "Enviar Mensagem",
+    footer_rights: "© 2026 CoreLogicLabs. Todos os direitos reservados.",
+    footer_privacy: "Política de Privacidade",
   }
 };
 
@@ -97,6 +136,19 @@ function applyTranslations(lang) {
   });
 
   document.documentElement.lang = lang;
+
+  // Update <title> and meta description per language
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (lang === 'pt') {
+    document.title = 'CoreLogicLabs — Construa com Inteligência';
+    if (metaDesc) metaDesc.content = 'Aplicativos móveis com IA. Design moderno, infraestrutura confiável, soluções digitais focadas no usuário.';
+  } else if (lang === 'tr') {
+    document.title = 'CoreLogicLabs — Daha Akıllı Üret';
+    if (metaDesc) metaDesc.content = 'CoreLogicLabs — Yapay zekâ destekli mobil uygulamalar. Modern tasarım, güvenilir altyapı, kullanıcı odaklı dijital çözümler.';
+  } else {
+    document.title = 'CoreLogicLabs';
+    if (metaDesc) metaDesc.content = 'CoreLogicLabs — Build Smarter. Live Better. Play More. AI-powered mobile apps on Google Play.';
+  }
 }
 
 function setLanguage(lang) {
@@ -107,7 +159,9 @@ function setLanguage(lang) {
 }
 
 function toggleLanguage() {
-  setLanguage(currentLang === 'en' ? 'tr' : 'en');
+  const order = ['en', 'tr', 'pt'];
+  const idx = order.indexOf(currentLang);
+  setLanguage(order[(idx + 1) % order.length]);
 }
 
 // Initialize on DOM ready

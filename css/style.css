@@ -598,6 +598,34 @@ img { max-width: 100%; display: block; }
 
 .contact-form .btn-primary {
   align-self: flex-start;
+  cursor: pointer;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+/* ─── Form Group ─────────────────────────────────────────────────────────── */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  color: var(--text-primary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-purple);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-secondary);
 }
 
 /* ─── Footer ─────────────────────────────────────────────────────────────── */
