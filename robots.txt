@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://corelogiclabs.github.io/sitemap.xml
+Sitemap: https://denniss83.github.io/CoreLogicLabs-Web/sitemap.xml
